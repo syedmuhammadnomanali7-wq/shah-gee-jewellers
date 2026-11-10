@@ -1,0 +1,79 @@
+/* =========================================
+   ADMIN PANEL STYLES
+   ========================================= */
+body { background: #f4f4f4; }
+.admin-bg {
+  position: fixed; inset: 0; z-index: -1;
+  background: linear-gradient(135deg, #0D0D0D, #4B0F1C);
+  opacity: .15;
+}
+
+/* LOGIN */
+.admin-login {
+  min-height: 100vh; display: flex; align-items: center; justify-content: center;
+  padding: 20px;
+}
+.login-card {
+  background: #fff; padding: 50px 40px; border-radius: 6px;
+  width: 100%; max-width: 420px;
+  box-shadow: 0 20px 60px rgba(0,0,0,.15);
+  border-top: 4px solid #C9A227;
+}
+.login-card h1 { font-family: 'Cormorant Garamond', serif; font-size: 2rem; color: #4B0F1C; text-align: center; margin-bottom: 8px; }
+.login-card h1 span { color: #C9A227; }
+.login-card > p { text-align: center; color: #888; margin-bottom: 30px; font-size: .9rem; }
+.pass-wrap { position: relative; margin-bottom: 16px; }
+.pass-wrap input {
+  width: 100%; padding: 14px 44px 14px 16px; border: 1px solid #ddd;
+  border-radius: 2px; font-family: inherit; font-size: 1rem;
+}
+.pass-wrap input:focus { outline: none; border-color: #C9A227; }
+.pass-wrap button {
+  position: absolute; right: 8px; top: 50%; transform: translateY(-50%);
+  background: none; font-size: 1.2rem; padding: 4px; color: #666; border: none; cursor: pointer;
+}
+.login-error { color: #c00; text-align: center; margin-top: 12px; min-height: 20px; font-size: .85rem; }
+.back-link { display: block; text-align: center; margin-top: 24px; color: #888; font-size: .85rem; text-decoration: none;}
+.back-link:hover { color: #C9A227; }
+
+/* DASHBOARD */
+.admin-dash { padding: 30px; max-width: 1400px; margin: 0 auto; }
+.dash-header {
+  display: flex; justify-content: space-between; align-items: center;
+  background: #0D0D0D; padding: 20px 30px; border-radius: 4px;
+  margin-bottom: 30px; border-left: 4px solid #C9A227;
+}
+.dash-header h1 { color: #F5E6C8; font-size: 1.6rem; font-family: 'Cormorant Garamond', serif; }
+.dash-content { display: grid; grid-template-columns: 1fr 1.3fr; gap: 30px; }
+.dash-col { background: #fff; padding: 30px; border-radius: 4px; box-shadow: 0 4px 20px rgba(0,0,0,.06); }
+.dash-col h2 { font-family: 'Cormorant Garamond', serif; color: #4B0F1C; font-size: 1.5rem; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #C9A227; }
+.admin-form { display: flex; flex-direction: column; gap: 12px; }
+.admin-form input, .admin-form select, .admin-form textarea {
+  padding: 12px 14px; border: 1px solid #ddd; border-radius: 2px;
+  font-family: inherit; font-size: .95rem;
+}
+.admin-form input:focus, .admin-form select:focus, .admin-form textarea:focus { outline: none; border-color: #C9A227; }
+.file-label { font-size: .85rem; color: #666; }
+.file-label input[type=file] { width: 100%; padding: 8px; margin-top: 6px; border: 1px dashed #C9A227; border-radius: 2px; }
+.checkbox-label { display: flex; align-items: center; gap: 8px; font-size: .9rem; color: #444; cursor: pointer;}
+.form-actions { display: flex; gap: 10px; margin-top: 8px; }
+.form-actions button { flex: 1; cursor: pointer;}
+.btn-gold, .btn-ghost { padding: 12px 20px; border-radius: 2px; font-weight: 600; font-size: .85rem; letter-spacing: .08em; text-transform: uppercase; }
+.btn-gold { background: linear-gradient(135deg, #C9A227, #F5E6C8, #C9A227); color: #0D0D0D; border: none; }
+.btn-ghost { background: transparent; border: 1px solid #C9A227; color: #C9A227; }
+
+/* PRODUCTS TABLE */
+.products-table { width: 100%; border-collapse: collapse; font-size: .9rem; }
+.products-table th, .products-table td { padding: 10px; text-align: left; border-bottom: 1px solid #eee; }
+.products-table th { background: #0D0D0D; color: #F5E6C8; font-size: .8rem; text-transform: uppercase; }
+.products-table img { width: 50px; height: 50px; object-fit: cover; border-radius: 2px; }
+.products-table button { padding: 6px 12px; font-size: .75rem; border-radius: 2px; margin-right: 4px; cursor: pointer; border: none;}
+.products-table .btn-edit { background: #C9A227; color: #0D0D0D; }
+.products-table .btn-del { background: #c00; color: #fff; }
+.table-wrap { max-height: 600px; overflow: auto; }
+
+@media (max-width: 900px) {
+  .dash-content { grid-template-columns: 1fr; }
+  .admin-dash { padding: 15px; }
+  .dash-header { flex-direction: column; gap: 12px; text-align: center; }
+}

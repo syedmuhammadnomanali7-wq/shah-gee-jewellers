@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow" />
+<title>Admin Panel — Shah Gee Jewellers</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/admin.css" />
+</head>
+<body>
+
+<div class="admin-bg"></div>
+
+<!-- LOGIN -->
+<div class="admin-login" id="loginBox">
+  <div class="login-card">
+    <h1>Shah Gee <span>Admin</span></h1>
+    <p>Enter password to continue</p>
+    <div class="pass-wrap">
+      <input type="password" id="adminPass" placeholder="Password" />
+      <button type="button" id="togglePass" aria-label="Show password">👁</button>
+    </div>
+    <button class="btn-gold" id="loginBtn" style="width:100%;">Login</button>
+    <p class="login-error" id="loginError"></p>
+    <a href="index.html" class="back-link">← Back to website</a>
+  </div>
+</div>
+
+<!-- DASHBOARD -->
+<div class="admin-dash" id="dashBox" style="display:none;">
+  <div class="dash-header">
+    <h1>Admin Dashboard</h1>
+    <button class="btn-ghost" id="logoutBtn">Logout</button>
+  </div>
+  <div class="dash-content">
+    <div class="dash-col">
+      <h2 id="formTitle">Add New Product</h2>
+      <form id="productForm" class="admin-form">
+        <input type="hidden" id="editId" />
+        <input type="text" id="pName" placeholder="Product Name" required />
+        <select id="pCategory" required>
+          <option value="">Select Category</option>
+          <option value="gold">Gold</option>
+          <option value="silver">Silver</option>
+          <option value="bridal">Bridal Sets</option>
+          <option value="bangles">Bangles</option>
+          <option value="rings">Rings</option>
+          <option value="earrings">Earrings</option>
+          <option value="necklaces">Necklaces</option>
+          <option value="chains">Chains</option>
+          <option value="nose-pins">Nose Pins</option>
+          <option value="anklets">Anklets</option>
+          <option value="lockets">Lockets</option>
+          <option value="kundan">Kundan / Temple</option>
+          <option value="artificial">Artificial</option>
+          <option value="kids">Kids</option>
+          <option value="mens">Men's</option>
+        </select>
+        <input type="number" id="pPrice" placeholder="Price (PKR)" required />
+        <input type="text" id="pPurity" placeholder="Purity (e.g. 22K Gold)" />
+        <input type="text" id="pWeight" placeholder="Weight (e.g. 45g)" />
+        <input type="text" id="pImage" placeholder="Image URL (Unsplash/Pexels/etc.)" />
+        <label class="file-label">Or upload image file:
+          <input type="file" id="pFile" accept="image/*" />
+        </label>
+        <textarea id="pDesc" rows="4" placeholder="Description"></textarea>
+        <label class="checkbox-label"><input type="checkbox" id="pFeatured" /> Featured on homepage</label>
+        <div class="form-actions">
+          <button type="submit" class="btn-gold">Save Product</button>
+          <button type="button" class="btn-ghost" id="cancelEdit" style="display:none;">Cancel</button>
+        </div>
+      </form>
+    </div>
+    <div class="dash-col">
+      <h2>Products List</h2>
+      <div id="productsTableWrap"></div>
+    </div>
+  </div>
+</div>
+
+<script src="js/products.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>

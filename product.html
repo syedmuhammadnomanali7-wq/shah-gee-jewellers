@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Product — Shah Gee Jewellers</title>
+<meta name="description" content="View product details and order on WhatsApp from Shah Gee Jewellers, Lahore Cantt. 22K gold & 925 silver jewellery." />
+<link rel="canonical" href="https://shahgeejewellers.pk/product.html" />
+<meta property="og:title" content="Product — Shah Gee Jewellers" />
+<meta property="og:type" content="product" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header class="navbar scrolled" id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">Shah Gee <span>Jewellers</span></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="cart.html" class="cart-link">Cart <span class="cart-badge" id="cartBadge">0</span></a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
+  </div>
+</header>
+
+<section class="section product-detail-section">
+  <div class="container">
+    <p class="breadcrumb"><a href="index.html">Home</a> / <a href="shop.html">Shop</a> / <span id="breadcrumbName">Product</span></p>
+    <div class="product-detail" id="productDetail"></div>
+    <div class="not-found" id="notFound" style="display:none;">
+      <h2>Product not found</h2>
+      <p>Please return to the <a href="shop.html">shop</a> to browse our collection.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section-dark" id="relatedSection">
+  <div class="container">
+    <h2 class="section-title light" data-aos="fade-up">You May Also Like</h2>
+    <div class="products-grid" id="relatedGrid"></div>
+  </div>
+</section>
+
+<a href="https://wa.me/923266501314" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.2-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.6-2.1-.2-.3 0-.4.1-.6.1-.1.3-.3.4-.5.1-.2.1-.3.2-.5.1-.2 0-.3 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1.1 1-1.1 2.5s1.1 2.9 1.3 3.1c.1.2 2.2 3.3 5.3 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.4zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.8L2 22l5.4-1.3c1.4.8 3 1.3 4.6 1.3 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.3c-1.5 0-3-.4-4.2-1.2l-.3-.2-3.2.8.8-3.1-.2-.3C4.1 15 3.7 13.5 3.7 12c0-4.6 3.7-8.3 8.3-8.3s8.3 3.7 8.3 8.3-3.7 8.3-8.3 8.3z"/></svg>
+</a>
+
+<div id="site-footer"></div>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="js/products.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
